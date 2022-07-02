@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  margin: 0;
   height: 100%;
 }
 
@@ -39,8 +40,28 @@ body {
 #landing-banner #leftHalf {
   flex-basis: 60%;
   height: 100%;
+  padding: 5% 16%;
+  display: flex;
+  flex-direction: column;
   background-image: url("../images/bg-pattern-desktop.svg");
   background-size: cover;
+}
+#landing-banner #leftHalf #logo {
+  flex-basis: 10%;
+}
+#landing-banner #leftHalf * {
+  margin: 0;
+}
+#landing-banner #leftHalf #mainContent {
+  flex-basis: 90%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#landing-banner #leftHalf #mainContent h1 {
+  letter-spacing: 18px;
+  padding: 5px 0;
 }
 #landing-banner #leftHalf #mainContent > :first-child {
   font-family: "Josefin Sans", sans-serif;
@@ -48,7 +69,7 @@ body {
   font-size: 6rem;
   color: hsl(0deg, 36%, 70%);
 }
-#landing-banner #leftHalf #mainContent :first-child + h1 {
+#landing-banner #leftHalf #mainContent :first-child + h1, #landing-banner #leftHalf #mainContent :first-child + h1 + h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   font-size: 6rem;
@@ -59,17 +80,21 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   color: hsl(0deg, 36%, 70%);
+  line-height: 35px;
+  letter-spacing: 1px;
+  padding: 5% 0 10% 0;
 }
 #landing-banner #leftHalf form {
   display: flex;
   width: 100%;
+  position: relative;
 }
 #landing-banner #leftHalf form input[type=text] {
-  flex-basis: 90%;
-  padding: 15px 30px;
+  flex-basis: 100%;
+  padding: 22px 35px;
   background: none;
   border-radius: 100px;
-  border: 1px solid hsla(0deg, 6%, 24%, 0.35);
+  border: 1px solid rgba(95, 86, 86, 0.25);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -79,9 +104,10 @@ body {
   color: hsla(0deg, 36%, 70%, 0.6);
 }
 #landing-banner #leftHalf form input[type=submit] {
-  flex-basis: 10%;
-  position: relative;
-  right: 10%;
+  position: absolute;
+  left: 81%;
+  height: 100%;
+  width: 19%;
   border-radius: 100px;
   border: none;
   background-image: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
